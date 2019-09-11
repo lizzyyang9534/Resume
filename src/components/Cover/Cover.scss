@@ -1,0 +1,45 @@
+@import "../../assets/style/variable";
+
+@mixin circle($diameter, $background) {
+  position: absolute;
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+  background: $background;
+}
+
+.circle-black {
+  @include circle(2vw, #000);
+  top: 15vh;
+  left: 12vw;
+}
+
+.circle-yellow {
+  @include circle(32vw, $color-yellow);
+  bottom: -15vh;
+  left: 5vw;
+  background: $color-yellow;
+}
+
+.circle-gray {
+  @include circle(20vw, $color-gray);
+  top: 5rem;
+  right: 4rem;
+}
+
+.my-name {
+  position: absolute;
+  width: 25vw;
+  height: 20vh;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .lizzy{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

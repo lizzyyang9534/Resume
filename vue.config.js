@@ -10,9 +10,9 @@ module.exports = {
     //   })
     // ],
     devServer: {
-      contentBase: "./dist",
+      contentBase: './dist',
       hot: true,
-      open: true
-    }
-  }
+      open: true,
+    },
+  },
 };
