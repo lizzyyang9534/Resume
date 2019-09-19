@@ -29,7 +29,23 @@
   right: 0;
   left: 0;
 
-  .lizzy{
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: .5rem;
+    height: 15px;
+    width: 100%;
+    background-color: #000000;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .6s ease;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
+
+  .lizzy {
     position: absolute;
     bottom: 0;
     width: 100%;

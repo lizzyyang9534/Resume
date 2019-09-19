@@ -7,29 +7,29 @@ export default class Timeline extends Vue {
   events: Event[] = [
     <Event>{
       title: "就讀中正大學資訊管理學系",
-      displaySide: "right"
+      displaySide: side.right
     },
     <Event>{
       title: "電算中心櫃台人員",
-      displaySide: "right"
+      displaySide: side.right
     },
     <Event>{
       title: "輔導中心網站維護人員",
-      displaySide: "right"
+      displaySide: side.right
     },
     <Event>{
       title: "鈦坦科技實習",
       description: "Software Engineer Internship",
-      displaySide: "left"
+      displaySide: side.left
     },
     <Event>{
       title: "畢業",
-      displaySide: "right"
+      displaySide: side.right
     },
     <Event>{
       title: "任職於鈦坦科技",
       description: "Product Developer",
-      displaySide: "left",
+      displaySide: side.left,
       isActive: true
     }
   ];
@@ -41,3 +41,8 @@ class Event {
   displaySide: string;
   isActive: boolean;
 }
+
+const side = {
+  left: "left",
+  right: "right"
+};
