@@ -1,0 +1,11 @@
+@mixin absolute-circle($diameter, $background) {
+  position: absolute;
+  @include circle($diameter, $background);
+}
+
+@mixin circle($diameter, $background) {
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+  background: $background;
+}

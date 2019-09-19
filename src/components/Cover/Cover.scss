@@ -1,28 +1,20 @@
-@import "../../assets/style/variable";
-
-@mixin circle($diameter, $background) {
-  position: absolute;
-  width: $diameter;
-  height: $diameter;
-  border-radius: 50%;
-  background: $background;
-}
+@import "../../assets/style/global.scss";
 
 .circle-black {
-  @include circle(2vw, #000);
+  @include absolute-circle(2vw, #000);
   top: 15vh;
   left: 12vw;
 }
 
 .circle-yellow {
-  @include circle(32vw, $color-yellow);
-  bottom: -15vh;
+  @include absolute-circle(32vw, $color-yellow);
+  bottom: -22vh;
   left: 5vw;
   background: $color-yellow;
 }
 
 .circle-gray {
-  @include circle(20vw, $color-gray);
+  @include absolute-circle(20vw, $color-gray);
   top: 5rem;
   right: 4rem;
 }

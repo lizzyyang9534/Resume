@@ -1,0 +1,95 @@
+@import "../../assets/style/global.scss";
+
+@mixin dot($color) {
+  @include circle(2rem, $color);
+  content: "";
+  position: absolute;
+  top: 32px;
+}
+
+.history {
+  width: 100%;
+  height: 100%;
+}
+.timeline {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+
+  //   .line {
+  //     position: absolute;
+  //     top: 0;
+  //     width: 0.5rem;
+  //     height: 100%;
+  //     background: #c1c1c1;
+  //   }
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border: 5px solid #c1c1c1;
+    right: calc(50% - 5px);
+    top: 0;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .events {
+    width: 100%;
+    height: 100%;
+    padding: 7rem 0;
+    box-sizing: border-box;
+  }
+
+  .event {
+    padding: 2rem 2.5rem;
+    width: 50%;
+    box-sizing: border-box;
+    clear: both;
+
+    &.right {
+      position: relative;
+      float: right;
+
+      &:before {
+        @include dot($color-dark-gray);
+        left: -16px;
+      }
+
+      &.active:before {
+        @include dot($color-yellow);
+      }
+    }
+
+    &.left {
+      position: relative;
+      float: left;
+      text-align: right;
+
+      &:after {
+        @include dot($color-dark-gray);
+        right: -16px;
+      }
+
+      &.active:after {
+        @include dot($color-yellow);
+      }
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .description {
+      padding-top: 0.5rem;
+      color: #9a9c9e;
+      font-size: 1.2rem;
+    }
+  }
+}
