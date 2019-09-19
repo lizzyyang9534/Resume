@@ -3,7 +3,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component({
   components: {}
 })
-export default class History extends Vue {
+export default class Timeline extends Vue {
   events: Event[] = [
     <Event>{
       title: "就讀中正大學資訊管理學系",

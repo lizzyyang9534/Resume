@@ -7,23 +7,11 @@
   top: 32px;
 }
 
-.history {
-  width: 100%;
-  height: 100%;
-}
 .timeline {
   position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-
-  //   .line {
-  //     position: absolute;
-  //     top: 0;
-  //     width: 0.5rem;
-  //     height: 100%;
-  //     background: #c1c1c1;
-  //   }
 
   &:before {
     content: "";
@@ -61,10 +49,6 @@
         @include dot($color-dark-gray);
         left: -16px;
       }
-
-      &.active:before {
-        @include dot($color-yellow);
-      }
     }
 
     &.left {
@@ -76,14 +60,28 @@
         @include dot($color-dark-gray);
         right: -16px;
       }
+    }
 
-      &.active:after {
+    &.active {
+      .title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #000;
+      }
+
+      .description {
+        font-size: 2rem;
+      }
+
+      &.right:before, &.left:after {
         @include dot($color-yellow);
+        top: 41px;
       }
     }
 
     .title {
       font-size: 2rem;
+      color: $color-dark-gray;
     }
 
     .description {

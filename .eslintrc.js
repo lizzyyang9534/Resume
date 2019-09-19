@@ -9,7 +9,9 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     "semi": ["warn", "always"],
     "quotes": ["warn", "double"],
-    "comma-dangle": ["warn", "never"]
+    "comma-dangle": ["warn", "never"],
+    "max-len": ["warn", { "code": 140 }],
+    "lines-between-class-members": ["warn", "never"]
   },
   parserOptions: {
     parser: "@typescript-eslint/parser"

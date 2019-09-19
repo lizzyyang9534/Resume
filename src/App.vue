@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <div class="slide"><Cover/></div>
-    <div class="slide"><History /></div>
+    <div class="slide"><Timeline /></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Cover from "@/components/Cover/Cover.vue";
-import History from "@/components/History/History.vue";
+import Timeline from "@/components/Timeline/Timeline.vue";
 
 @Component({
   components: {
-    Cover, History
+    Cover, Timeline
   }
 })
 export default class App extends Vue {}
