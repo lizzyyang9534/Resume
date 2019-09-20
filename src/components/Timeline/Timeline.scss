@@ -1,7 +1,7 @@
 @import "../../assets/style/global.scss";
 
 @mixin dot($color) {
-  @include circle(2rem, $color);
+  @include solid-circle(2rem, $color);
   content: "";
   position: absolute;
   top: 32px;
@@ -90,6 +90,12 @@
       font-size: 1.2rem;
     }
   }
+
+  .circle-gray {
+    @include absolute-outline-circle(20vw, 1px, $color-gray);
+    bottom: 5rem;
+    right: 4rem;
+  }
 }
 
 @media screen and (max-width: 945px) {
@@ -97,6 +103,11 @@
     &:before {
       right: auto;
       left: calc(20% - 5px);
+    }
+
+    .circle-gray {
+      width: 25vw;
+      height: 25vw;
     }
   }
   .events .event {
@@ -119,6 +130,7 @@
     &.left {
       &:before {
         @include dot($color-dark-gray);
+        top: 20px;
         left: -16px;
       }
       &.active {
@@ -138,6 +150,81 @@
 
       &:after {
         display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .timeline {
+    &:before {
+      border-width: 3px;
+      left: calc(20% - 3px);
+    }
+
+    .events {
+      .event {
+        &.left,
+        &.right {
+          .title {
+            font-size: 1.3rem;
+          }
+
+          .description {
+            font-size: 1rem;
+          }
+        }
+
+        &.left {
+          &.active {
+            &:before {
+              top: 24px;
+            }
+
+            .title {
+              font-size: 1.5rem;
+            }
+
+            .description {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .circle-gray {
+      width: 30vw;
+      height: 30vw;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .timeline .events {
+    padding: 5rem 0;
+
+    .event {
+      &.left,
+      &.right {
+        padding: 1rem 2rem;
+
+        &:before {
+          width: 1.6rem;
+          height: 1.6rem;
+          top: 14px;
+          left: -14px;
+        }
+      }
+
+      &.left {
+        &.active {
+          &:before {
+            top: 15px;
+          }
+        }
       }
     }
   }

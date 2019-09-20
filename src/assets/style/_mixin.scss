@@ -1,11 +1,21 @@
 @mixin absolute-circle($diameter, $background) {
+  @include solid-circle($diameter, $background);
   position: absolute;
-  @include circle($diameter, $background);
 }
 
-@mixin circle($diameter, $background) {
+@mixin absolute-outline-circle($diameter, $border-width, $border-color) {
+  @include circle($diameter);
+  position: absolute;
+  border: $border-width solid $border-color;
+}
+
+@mixin solid-circle($diameter, $background) {
+  @include circle($diameter);
+  background: $background;
+}
+
+@mixin circle($diameter) {
   width: $diameter;
   height: $diameter;
   border-radius: 50%;
-  background: $background;
 }

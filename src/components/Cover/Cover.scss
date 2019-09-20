@@ -30,7 +30,7 @@
 }
 
 .my-name {
-  @include scale-animation(2, scaleX);
+  @include scale-animation(2, scale-from-left);
   position: absolute;
   width: 25vw;
   height: 20vh;
@@ -78,6 +78,11 @@
   transform: rotate(135deg);
   bottom: 0;
   left: calc(50% - 2.1rem);
+  opacity: 0;
+  animation: fade-in-top .5s ease 2.5s;
+  animation-fill-mode: forwards;
+  transition: color .5s;
+  cursor: pointer;
 
   &:after,
   &:before {
@@ -94,6 +99,10 @@
     width: 68px;
     transform-origin: right top;
   }
+
+  &:hover{
+    color: #000;
+  }
 }
 
 @keyframes scale {
@@ -105,12 +114,23 @@
   }
 }
 
-@keyframes scaleX {
+@keyframes scale-from-left {
   0% {
     transform: scaleX(0);
   }
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    bottom: 2rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
   }
 }
 
@@ -155,5 +175,23 @@
     width: 28vw;
     height: 28vw;
     right: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .circle-yellow {
+    left: -7vw;
+    width: 55vw;
+    height: 55vw;
+  }
+
+  .circle-gray{
+    width: 30vw;
+    height: 30vw;
+    right: 1rem;
+  }
+
+  .my-name {
+    width: 60vw;
   }
 }
