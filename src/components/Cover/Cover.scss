@@ -3,7 +3,7 @@
 @mixin scale-animation($seq, $animation) {
   transform: scale(0);
   animation: $animation 0.5s;
-  animation-delay: $seq * .5s;
+  animation-delay: $seq * 0.5s;
   animation-fill-mode: forwards;
 }
 
@@ -61,6 +61,38 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
+}
+
+.arrow {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  color: $color-gray;
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  margin: 10px;
+  transform: rotate(135deg);
+  bottom: 0;
+  left: calc(50% - 2.1rem);
+
+  &:after,
+  &:before {
+    content: "";
+    box-sizing: border-box;
+  }
+  &:before {
+    right: 0;
+    top: -7px;
+    position: absolute;
+    height: 10px;
+    box-shadow: inset 0 0 0 32px;
+    transform: rotate(-45deg);
+    width: 68px;
+    transform-origin: right top;
   }
 }
 
