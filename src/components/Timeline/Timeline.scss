@@ -72,7 +72,8 @@
         font-size: 2rem;
       }
 
-      &.right:before, &.left:after {
+      &.right:before,
+      &.left:after {
         @include dot($color-yellow);
         top: 41px;
       }
@@ -87,6 +88,57 @@
       padding-top: 0.5rem;
       color: $color-gray;
       font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .timeline {
+    &:before {
+      right: auto;
+      left: calc(20% - 5px);
+    }
+  }
+  .events .event {
+    &.left,
+    &.right {
+      float: right;
+      padding: 1.5rem 2.5rem;
+      width: 80%;
+      text-align: left;
+
+      &:before {
+        top: 20px;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+
+    &.left {
+      &:before {
+        @include dot($color-dark-gray);
+        left: -16px;
+      }
+      &.active {
+        &:before {
+          @include dot($color-yellow);
+          top: 24px;
+        }
+
+        .title {
+          font-size: 2rem;
+        }
+
+        .description {
+          font-size: 1.5rem;
+        }
+      }
+
+      &:after {
+        display: none;
+      }
     }
   }
 }

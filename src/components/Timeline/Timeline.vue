@@ -1,6 +1,5 @@
 <template>
   <div class="timeline">
-    <div class="line"></div>
     <div class="events">
       <div class="event" v-for="event in events" :key="event.title" :class="[event.displaySide, event.isActive ? 'active' : '']">
         <div class="title">{{event.title}}</div>

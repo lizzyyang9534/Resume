@@ -113,3 +113,47 @@
     transform: scaleX(1);
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .my-name {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .circle-yellow {
+    bottom: -15vh;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .my-name {
+    width: 50vw;
+  }
+  .circle-yellow {
+    bottom: -10vh;
+    left: 3vw;
+    width: 36vw;
+    height: 36vw;
+  }
+
+  .arrow {
+    left: calc(20% - 2.1rem);
+    color: $color-dark-gray;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .circle-yellow {
+    left: -5vw;
+    bottom: -5vh;
+    width: 42vw;
+    height: 42vw;
+  }
+
+  .circle-gray{
+    width: 28vw;
+    height: 28vw;
+    right: 1rem;
+  }
+}
