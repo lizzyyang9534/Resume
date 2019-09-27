@@ -1,0 +1,17 @@
+@import "../../assets/style/global.scss";
+
+.photo{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    border: 1rem solid $color-yellow;
+
+    img{
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+    .back {
+        @include solid-circle(40vh, $color-yellow);
+    }
+}

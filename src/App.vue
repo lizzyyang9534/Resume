@@ -2,12 +2,15 @@
   <div id="app">
     <!-- <div class="slide"><Cover/></div>
     <div class="slide"><Timeline /></div>-->
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" ref="mainSwiper">
       <swiper-slide>
         <Cover />
       </swiper-slide>
       <swiper-slide>
         <Timeline />
+      </swiper-slide>
+      <swiper-slide>
+        <Introduction />
       </swiper-slide>
     </swiper>
   </div>
@@ -15,11 +18,14 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import { Action } from "vuex-class";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
+import SwiperClass from "swiper";
 import "./assets/style/swiper.css";
 import Cover from "@/components/Cover/Cover.vue";
 import Timeline from "@/components/Timeline/Timeline.vue";
 import Introduction from "@/components/Introduction/Introduction.vue";
+import { actionName } from "./store";
 
 @Component({
   components: {
@@ -31,11 +37,12 @@ import Introduction from "@/components/Introduction/Introduction.vue";
   }
 })
 export default class App extends Vue {
+  @Action(actionName.initSwiper) initSwiper: (swiper: SwiperClass) => void;
   swiperOption: object = {
     direction: "vertical",
     slidesPerView: 1,
-    spaceBetween: 10,
     speed: 1050,
+    autoHeight: true,
     mousewheel: {
       releaseOnEdges: true
     },
@@ -46,6 +53,9 @@ export default class App extends Vue {
       enabled: true
     }
   };
+  mounted() {
+    this.initSwiper(this.$refs.mainSwiper.swiper);
+  }
 }
 </script>
 
