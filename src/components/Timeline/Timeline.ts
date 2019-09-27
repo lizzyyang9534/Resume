@@ -1,5 +1,17 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
+class Event {
+  title: string;
+  description: string;
+  displaySide: string;
+  isActive: boolean;
+}
+
+const side = {
+  left: "left",
+  right: "right"
+};
+
 @Component({
   components: {}
 })
@@ -34,15 +46,3 @@ export default class Timeline extends Vue {
     }
   ];
 }
-
-class Event {
-  title: string;
-  description: string;
-  displaySide: string;
-  isActive: boolean;
-}
-
-const side = {
-  left: "left",
-  right: "right"
-};

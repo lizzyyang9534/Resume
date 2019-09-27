@@ -17,7 +17,7 @@
 .circle-yellow {
   @include absolute-circle(32vw, $color-yellow);
   @include scale-animation(1, scale);
-  bottom: -22vh;
+  top: 62vh;
   left: 5vw;
   background: $color-yellow;
 }
@@ -35,8 +35,7 @@
   width: 25vw;
   height: 20vh;
   margin: auto;
-  top: 0;
-  bottom: 0;
+  top: 40vh;
   right: 0;
   left: 0;
   transform-origin: left;
@@ -76,7 +75,7 @@
   border-style: solid;
   margin: 10px;
   transform: rotate(135deg);
-  bottom: 0;
+  top: calc(100vh - 4.3rem);
   left: calc(50% - 2.1rem);
   opacity: 0;
   animation: fade-in-top .5s ease 2.5s;
@@ -142,7 +141,7 @@
 
 @media screen and (max-width: 1000px) {
   .circle-yellow {
-    bottom: -15vh;
+    top: 69vh;
   }
 }
 
@@ -151,7 +150,7 @@
     width: 50vw;
   }
   .circle-yellow {
-    bottom: -10vh;
+    top: 74vh;
     left: 3vw;
     width: 36vw;
     height: 36vw;
@@ -166,7 +165,7 @@
 @media screen and (max-width: 700px) {
   .circle-yellow {
     left: -5vw;
-    bottom: -5vh;
+    top: 79vh;
     width: 42vw;
     height: 42vw;
   }
