@@ -1,0 +1,122 @@
+@import "../../assets/style/global.scss";
+
+.title {
+  position: absolute;
+  top: 5rem;
+  left: 7rem;
+  font-size: 5rem;
+  font-weight: bold;
+  z-index: 2;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    height: 10px;
+    width: 100%;
+    background-color: #000000;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 50vh;
+  width: 15vw;
+  padding-left: 5rem;
+
+  .option {
+    position: relative;
+    padding: 0.5rem 0;
+    text-align: right;
+    font-size: 1.8rem;
+    color: $color-gray;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      height: 0.2rem;
+      width: 0;
+      background: #000;
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translate3d(0%, -50%, 0);
+      transition: transform 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:before,
+    &.active:before {
+      width: 2rem;
+    }
+
+    &.active {
+      color: $color-dark-gray;
+      font-weight: bold;
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  top: 60vh;
+  width: .5rem;
+  height: 40vh;
+  background: $color-yellow;
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  right: 4rem;
+  width: 70vw;
+  height: 50vh;
+  padding: 25vh 0 25vh 3vw;
+  background: $color-light-gray;
+}
+
+.slide {
+  width: 100%;
+
+  .subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-dark-gray;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  @include square(7rem);
+  padding: 2rem;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.square-yellow {
+  @include square(4rem);
+  position: absolute;
+  top: calc(100vh - #{4rem});
+  right: 0;
+  background: $color-yellow;
+}
+
+@media screen and (max-width: 945px) {
+  .slides {
+    width: 60vw;
+  }
+}

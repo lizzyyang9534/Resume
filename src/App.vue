@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div class="slide"><Cover/></div>
-    <div class="slide"><Timeline /></div>-->
     <swiper :options="swiperOption" ref="mainSwiper">
       <swiper-slide>
         <Cover />
@@ -11,6 +9,9 @@
       </swiper-slide>
       <swiper-slide>
         <Introduction />
+      </swiper-slide>
+      <swiper-slide>
+        <Skills />
       </swiper-slide>
     </swiper>
   </div>
@@ -25,15 +26,17 @@ import "./assets/style/swiper.css";
 import Cover from "@/components/Cover/Cover.vue";
 import Timeline from "@/components/Timeline/Timeline.vue";
 import Introduction from "@/components/Introduction/Introduction.vue";
+import Skills from "@/components/Skills/Skills.vue";
 import { actionName } from "./store";
 
 @Component({
   components: {
+    swiper,
+    swiperSlide,
     Cover,
     Timeline,
     Introduction,
-    swiper,
-    swiperSlide
+    Skills
   }
 })
 export default class App extends Vue {

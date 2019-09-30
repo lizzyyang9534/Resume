@@ -19,7 +19,6 @@ export default new Vuex.Store({
   },
   actions: {
     [actionName.initSwiper](context, swiper: SwiperClass) {
-      console.log(swiper);
       context.commit(actionName.initSwiper, swiper);
     }
   }
