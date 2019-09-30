@@ -2,45 +2,45 @@
   <div>
     <div class="title">Skills.</div>
     <div class="navigation">
-      <div class="option active">Front end</div>
-      <div class="option">Back end</div>
-      <div class="option">Others</div>
+      <div class="option" v-for="(category, index) in categories" :key="category" :class="{'active': category.isActive}" @click="slideTo(index)">
+        {{category.title}}
+      </div>
     </div>
     <div class="line"></div>
-    <swiper class="slides" :options="swiperOption">
+    <swiper class="slides" ref="skillsSwiper" :options="swiperOption">
       <swiper-slide>
         <div class="slide front-end">
           <div class="subtitle">JS</div>
           <div class="skills">
-            <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="200">
-              <img src="../../assets/images/js.jpg" alt />
+            <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="400">
+              <img src="../../assets/images/js.jpg" />
             </div>
-            <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="200">
-              <img src="../../assets/images/ts.png" alt />
-            </div>
-            <div class="skill" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-              <img src="../../assets/images/jquery.png" alt />
+            <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="400">
+              <img src="../../assets/images/ts.png" />
             </div>
             <div class="skill" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-              <img src="../../assets/images/vue.png" alt />
+              <img src="../../assets/images/jquery.png" />
+            </div>
+            <div class="skill" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+              <img src="../../assets/images/vue.png" />
             </div>
             <div class="skill" data-swiper-parallax="-400" data-swiper-parallax-duration="800">
-              <img src="../../assets/images/phaser.png" alt />
+              <img src="../../assets/images/phaser.png" />
             </div>
           </div>
           <div class="subtitle">UI</div>
           <div class="skills">
             <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="1000">
-              <img src="../../assets/images/css.jpg" alt />
+              <img src="../../assets/images/css.jpg" />
             </div>
             <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="1000">
-              <img src="../../assets/images/sass.png" alt />
+              <img src="../../assets/images/sass.png" />
             </div>
             <div class="skill" data-swiper-parallax="-300" data-swiper-parallax-duration="1100">
-              <img src="../../assets/images/bootstrap.png" alt />
+              <img src="../../assets/images/bootstrap.png" />
             </div>
             <div class="skill" data-swiper-parallax="-400" data-swiper-parallax-duration="1200">
-              <img src="../../assets/images/semanticUI.png" alt />
+              <img src="../../assets/images/semanticUI.png" />
             </div>
           </div>
         </div>
