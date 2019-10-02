@@ -35,7 +35,7 @@ export default class Skills extends Vue {
       enabled: true
     },
     on: {
-      slideChange: this.onChange
+      slideChange: this.handleActiveSlide
     }
   };
 
@@ -43,14 +43,13 @@ export default class Skills extends Vue {
     return this.$refs.skillsSwiper.swiper;
   }
 
-  onChange() {
+  handleActiveSlide() {
     this.categories[this.swiper.previousIndex].isActive = false;
     this.categories[this.swiper.activeIndex].isActive = true;
   }
 
   slideTo(index: number) {
     this.swiper.slideTo(index);
-    this.categories[this.swiper.previousIndex].isActive = false;
-    this.categories[this.swiper.activeIndex].isActive = true;
+    this.handleActiveSlide();
   }
 }
