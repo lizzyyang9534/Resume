@@ -11,7 +11,8 @@ module.exports = {
     "quotes": ["warn", "double"],
     "comma-dangle": ["warn", "never"],
     "max-len": ["warn", { "code": 140 }],
-    "lines-between-class-members": ["warn", "never"]
+    "lines-between-class-members": ["warn", "always", { exceptAfterSingleLine: true }],
+    "no-param-reassign": ["error", { "props": false }]
   },
   parserOptions: {
     parser: "@typescript-eslint/parser"

@@ -27,19 +27,30 @@ export default class Skills extends Vue {
        title: "Others",
        isActive: false
      }];
+
   swiperOption: object = {
     parallax: true,
     autoHeight: true,
     keyboard: {
       enabled: true
+    },
+    on: {
+      slideChange: this.onChange
     }
   };
+
   get swiper(): SwiperClass {
     return this.$refs.skillsSwiper.swiper;
   }
+
+  onChange() {
+    this.categories[this.swiper.previousIndex].isActive = false;
+    this.categories[this.swiper.activeIndex].isActive = true;
+  }
+
   slideTo(index: number) {
-    this.categories.forEach((x) => { x.isActive = false; });
-    this.categories[index].isActive = true;
     this.swiper.slideTo(index);
+    this.categories[this.swiper.previousIndex].isActive = false;
+    this.categories[this.swiper.activeIndex].isActive = true;
   }
 }
