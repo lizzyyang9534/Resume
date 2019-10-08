@@ -10,7 +10,7 @@ module.exports = {
     "semi": ["warn", "always"],
     "quotes": ["warn", "double"],
     "comma-dangle": ["warn", "never"],
-    "max-len": ["warn", { "code": 140 }],
+    "max-len": ["warn", { "code": 150 }],
     "lines-between-class-members": ["warn", "always", { exceptAfterSingleLine: true }],
     "no-param-reassign": ["error", { "props": false }]
   },

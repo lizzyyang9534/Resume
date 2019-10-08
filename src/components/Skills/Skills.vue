@@ -9,7 +9,7 @@
     <div class="line"></div>
     <swiper class="slides" ref="skillsSwiper" :options="swiperOption">
       <swiper-slide>
-        <div class="slide front-end">
+        <div class="slide">
           <div class="subtitle">JS</div>
           <div class="skills">
             <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="400">
@@ -46,19 +46,25 @@
         </div>
       </swiper-slide>
       <swiper-slide>
-        <div class="slide back-end">
+        <div class="slide">
           <div class="subtitle">Back End</div>
-          <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="200">.</div>
-          <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="600">.</div>
-          <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="600">.</div>
-          <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="800">.</div>
+          <div class="skills">
+            <div class="skill" data-swiper-parallax="-200" data-swiper-parallax-duration="600">
+              <img src="../../assets/images/csharp.png" />
+            </div>
+            <div class="skill" data-swiper-parallax="-400" data-swiper-parallax-duration="800">
+              <img src="../../assets/images/sql server.png" />
+            </div>
+          </div>
         </div>
       </swiper-slide>
       <swiper-slide>
-        <div class="slide others">
+        <div class="slide">
           <div class="subtitle">Others</div>
-          <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="200">.</div>
-          <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="600">.</div>
+          <div class="skills">
+            <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="200">.</div>
+            <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="600">.</div>
+          </div>
         </div>
       </swiper-slide>
     </swiper>

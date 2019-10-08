@@ -56,6 +56,7 @@ export default class App extends Vue {
       enabled: true
     }
   };
+
   mounted() {
     this.initSwiper(this.$refs.mainSwiper.swiper);
   }

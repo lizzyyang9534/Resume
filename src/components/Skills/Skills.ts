@@ -14,6 +14,7 @@ class Category {
   }
 })
 export default class Skills extends Vue {
+  showNavigation: boolean = false;
   categories: Category[] = [
     <Category>{
       title: "Front end",
@@ -35,7 +36,8 @@ export default class Skills extends Vue {
       enabled: true
     },
     on: {
-      slideChange: this.handleActiveSlide
+      slideChange: this.handleActiveSlide,
+      resize: this.handleResize
     }
   };
 
@@ -43,9 +45,19 @@ export default class Skills extends Vue {
     return this.$refs.skillsSwiper.swiper;
   }
 
+  mounted() {
+    this.handleResize();
+  }
+
   handleActiveSlide() {
     this.categories[this.swiper.previousIndex].isActive = false;
     this.categories[this.swiper.activeIndex].isActive = true;
+  }
+
+  handleResize() {
+    if (this.swiper.width <= 945) {
+      this.showNavigation = true;
+    }
   }
 
   slideTo(index: number) {

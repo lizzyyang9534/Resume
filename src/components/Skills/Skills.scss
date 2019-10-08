@@ -46,7 +46,7 @@
       width: 0;
       background: #000;
       position: absolute;
-      left: 2rem;
+      left: -16px;
       top: 50%;
       transform: translate3d(0%, -50%, 0);
       transition: transform 0.3s ease-in-out;
@@ -55,7 +55,7 @@
 
     &:hover:before,
     &.active:before {
-      width: 2rem;
+      width: 1.5rem;
     }
 
     &.active {
@@ -68,7 +68,7 @@
 .line {
   position: absolute;
   top: 60vh;
-  width: .5rem;
+  width: 0.5rem;
   height: 40vh;
   background: $color-yellow;
 }
@@ -95,11 +95,15 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 
 .skill {
   @include square(7rem);
-  padding: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     max-width: 100%;
@@ -115,7 +119,51 @@
 }
 
 @media screen and (max-width: 945px) {
+  .title{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .navigation {
+    display: none;
+  }
+
   .slides {
-    width: 60vw;
+    right: 0;
+    padding: 25vh 0 0 5vw;
+    width: 100vw;
+    height: 75vh;
+
+    .slide {
+      padding: 0 10%;
+      box-sizing: border-box;
+    }
+  }
+
+  .skill {
+    @include square(5rem);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .skills {
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skill {
+    @include square(4rem);
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .skill {
+    padding: 0.5rem;
   }
 }
