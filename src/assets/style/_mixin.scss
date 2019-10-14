@@ -36,3 +36,11 @@
     $color 16px
   );
 }
+
+@mixin polka-dot($color) {
+  background-image:
+    radial-gradient($color 20%, transparent 0), 
+    radial-gradient($color 20%, transparent 0);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}

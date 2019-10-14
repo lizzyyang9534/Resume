@@ -1,15 +1,16 @@
 <template>
-  <div>
+  <div class="introduction">
     <div class="photo">
       <swiper :options="swiperOption">
         <swiper-slide>
           <img src="../../assets/images/photo.jpg" alt />
         </swiper-slide>
         <swiper-slide>
-            <div class="back"></div>
+          <div class="back">Lizzy</div>
         </swiper-slide>
       </swiper>
     </div>
+    <div class="circle-polka-dot"></div>
   </div>
 </template>
 

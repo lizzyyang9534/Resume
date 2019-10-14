@@ -95,6 +95,7 @@
 .skills {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding-bottom: 2rem;
 }
 
@@ -126,6 +127,10 @@
     margin: auto;
     margin-top: 3rem;
     text-align: center;
+
+    &:before {
+      width: 13rem;
+    }
   }
 
   .navigation {

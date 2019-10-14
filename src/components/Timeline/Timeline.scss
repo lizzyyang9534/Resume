@@ -15,7 +15,7 @@
   &:before {
     content: "";
     position: absolute;
-    height: 100vh;
+    height: calc(100% - 10px);
     border: 5px solid $color-gray;
     right: calc(50% - 5px);
     top: 0;
@@ -87,19 +87,19 @@
     }
   }
 
-  .circle-stripe-yellow {
-    @include circle(10vw);
-    @include stripe($color-yellow);
+  .circle-stripe-gray {
+    @include circle(20vw);
+    @include stripe($color-gray);
     position: absolute;
-    top: 10vh;
-    left: 5vw;
+    top: 80vh;
+    right: 4rem;
     z-index: 1;
   }
 
   .circle-yellow {
     @include absolute-outline-circle(20vw, 1px, $color-yellow);
-    top: 80vh;
-    right: 4rem;
+    top: 10vh;
+    left: 5vw;
   }
 }
 
@@ -110,16 +110,13 @@
       left: calc(20% - 5px);
     }
 
-    .circle-stripe-yellow {
-      width: 32vw;
-      height: 32vw;
-      top: -17vw;
-      left: -2vw;
+    .circle-stripe-gray {
+      width: 25vw;
+      height: 25vw;
     }
 
     .circle-yellow {
-      width: 25vw;
-      height: 25vw;
+      display: none;
     }
   }
   .events .event {
@@ -205,11 +202,7 @@
       }
     }
 
-    .circle-stripe-yellow {
-      top: -7vw;
-    }
-
-    .circle-yellow {
+    .circle-stripe-gray {
       width: 30vw;
       height: 30vw;
       top: 90vh;

@@ -1,17 +1,35 @@
 @import "../../assets/style/global.scss";
 
-.photo{
-    width: 40vh;
-    height: 40vh;
+.introduction {
+  position: relative;
+}
+
+.photo {
+  @include square(60vh);
+  position: absolute;
+  top: 10vh;
+  left: -2rem;
+  // border-radius: 50%;
+  // border: 1rem solid $color-yellow;
+
+  img {
+    max-width: 100%;
     border-radius: 50%;
-    border: 1rem solid $color-yellow;
+  }
 
-    img{
-        max-width: 100%;
-        border-radius: 50%;
-    }
+  .back {
+    @include solid-circle(60vh, $color-dark-gray);
+    display: flex;
+    font-size: 5rem;
+    color: $color-light-gray;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
-    .back {
-        @include solid-circle(40vh, $color-yellow);
-    }
+.circle-polka-dot {
+  @include polka-dot($color-dark-gray);
+  @include circle(20vh);
+  position: absolute;
+  top: 70vh;
 }

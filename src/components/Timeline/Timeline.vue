@@ -1,6 +1,6 @@
 <template>
   <div class="timeline">
-    <div class="circle-stripe-yellow"></div>
+    <div class="circle-stripe-gray"></div>
     <div class="circle-yellow"></div>
     <div class="events">
       <div class="event" v-for="event in events" :key="event.title" :class="[event.displaySide, event.isActive ? 'active' : '']">

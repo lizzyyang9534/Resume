@@ -5,10 +5,10 @@
         <Cover />
       </swiper-slide>
       <swiper-slide>
-        <Timeline />
+        <Introduction />
       </swiper-slide>
       <swiper-slide>
-        <Introduction />
+        <Timeline />
       </swiper-slide>
       <swiper-slide>
         <Skills />
@@ -49,16 +49,13 @@ export default class App extends Vue {
     mousewheel: {
       releaseOnEdges: true
     },
-    pagination: {
-      paginationHide: true
-    },
     keyboard: {
       enabled: true
     }
   };
 
   mounted() {
-    this.initSwiper(this.$refs.mainSwiper.swiper);
+    this.initSwiper((this.$refs.mainSwiper as swiper).swiper);
   }
 }
 </script>

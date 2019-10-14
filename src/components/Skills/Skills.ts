@@ -42,7 +42,7 @@ export default class Skills extends Vue {
   };
 
   get swiper(): SwiperClass {
-    return this.$refs.skillsSwiper.swiper;
+    return (this.$refs.skillsSwiper as swiper).swiper;
   }
 
   mounted() {

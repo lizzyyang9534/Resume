@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="title">Skills.</div>
+    <div class="title">Skills</div>
     <div class="navigation">
       <div class="option" v-for="(category, index) in categories" :key="index" :class="{'active': category.isActive}" @click="slideTo(index)">
         {{category.title}}
