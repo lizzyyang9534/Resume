@@ -56,14 +56,14 @@
               <img src="../../assets/images/sql server.png" />
             </div>
           </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
           <div class="subtitle">Others</div>
           <div class="skills">
-            <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="200">.</div>
-            <div class="skill" data-swiper-parallax="-100" data-swiper-parallax-duration="600">.</div>
+            <div class="skill" data-swiper-parallax="-400" data-swiper-parallax-duration="800">
+              <img src="../../assets/images/git.png" alt="">
+            </div>
+            <div class="skill" data-swiper-parallax="-600" data-swiper-parallax-duration="900">
+              <img src="../../assets/images/jenkins.png" alt="">
+            </div>
           </div>
         </div>
       </swiper-slide>

@@ -23,11 +23,7 @@ export default class Skills extends Vue {
     <Category>{
       title: "Back end",
       isActive: false
-    },
-     <Category>{
-       title: "Others",
-       isActive: false
-     }];
+    }];
 
   swiperOption: object = {
     parallax: true,
