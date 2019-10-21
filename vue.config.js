@@ -2,6 +2,7 @@
 // var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  publicPath: ".",
   configureWebpack: {
     // plugins: [
     //   new webpack.HotModuleReplacementPlugin(),
@@ -10,9 +11,9 @@ module.exports = {
     //   })
     // ],
     devServer: {
-      contentBase: './dist',
+      contentBase: "./dist",
       hot: true,
-      open: true,
-    },
-  },
+      open: true
+    }
+  }
 };
