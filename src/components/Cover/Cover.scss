@@ -78,8 +78,7 @@
   top: calc(100vh - 4.3rem);
   left: calc(50% - 2.1rem);
   opacity: 0;
-  animation: fade-in-top .5s ease 2.5s;
-  animation-fill-mode: forwards;
+  animation: 2s ease 2.5s infinite wheel-up-down;
   transition: color .5s;
   cursor: pointer;
 
@@ -130,6 +129,22 @@
   100% {
     opacity: 1;
     bottom: 0;
+  }
+}
+
+@keyframes wheel-up-down {
+  100% {
+      margin-top: 0;
+      opacity: 1
+  }
+
+  30% {
+      opacity: 1
+  }
+
+  0% {
+      margin-top: -2rem;
+      opacity: 1
   }
 }
 
