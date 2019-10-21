@@ -11,6 +11,9 @@
       </swiper>
     </div>
     <div class="circle-polka-dot"></div>
+    <div class="content">
+
+    </div>
   </div>
 </template>
 

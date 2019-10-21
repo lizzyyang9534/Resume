@@ -33,3 +33,12 @@
   position: absolute;
   top: 70vh;
 }
+
+.content {
+  float: right;
+  width: 50vw;
+
+  .title {
+    font-size: 3.2rem;
+  }
+}

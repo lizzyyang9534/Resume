@@ -4,9 +4,9 @@
       <swiper-slide>
         <Cover />
       </swiper-slide>
-      <swiper-slide>
+      <!-- <swiper-slide>
         <Introduction />
-      </swiper-slide>
+      </swiper-slide> -->
       <swiper-slide>
         <Timeline />
       </swiper-slide>
