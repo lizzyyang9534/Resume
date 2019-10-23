@@ -1,4 +1,6 @@
-# resume
+# Resume
+
+[Demo](https://lizzyyang9534.github.io/Resume/dist/index.html)
 
 ## Project setup
 ```
