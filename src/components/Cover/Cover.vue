@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="cover">
     <div class="circle-black"></div>
     <div class="circle-yellow"></div>
     <div class="circle-gray"></div>
